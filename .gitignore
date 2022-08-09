@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/OOF Gaurd/bin/Debug
+/.vs/OOF Gaurd/FileContentIndex
+/OOF Gaurd/obj/Debug
+/OOF Gaurd/publish
+/.vs/OOF Gaurd/v17/.suo
