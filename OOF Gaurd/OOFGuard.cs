@@ -3,9 +3,9 @@ using System.Linq;
 using Outlook = Microsoft.Office.Interop.Outlook;
 using System.Windows.Forms;
 
-namespace OOF_Gaurd
+namespace OOF_Guard
 {
-    public partial class OOFGaurd
+    public partial class OOFGuard
     {
         private readonly string[] OofVerbs = new[] { "oof", "ooo", "vacation", "out of office" };
 
@@ -61,7 +61,7 @@ namespace OOF_Gaurd
 
             var res = MessageBox.Show($"You are about to send a meeting with {status} status to {meeting.Recipients.Count} recepients.\n\n" +
                 $"This will set all recipients to appear as {status} as well.\n\n" +
-                "Are you sure?", "OOF Gaurd",
+                "Are you sure?", "OOF Guard",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 

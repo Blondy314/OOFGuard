@@ -1,4 +1,4 @@
-﻿namespace OOF_Gaurd
+﻿namespace OOF_Guard
 {
     partial class Ribbon1 : Microsoft.Office.Tools.Ribbon.RibbonBase
     {

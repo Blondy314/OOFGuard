@@ -9,13 +9,13 @@
 //------------------------------------------------------------------------------
 
 #pragma warning disable 414
-namespace OOF_Gaurd {
+namespace OOF_Guard {
     
     
     /// 
     [Microsoft.VisualStudio.Tools.Applications.Runtime.StartupObjectAttribute(0)]
     [global::System.Security.Permissions.PermissionSetAttribute(global::System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]
-    public sealed partial class OOFGaurd : Microsoft.Office.Tools.Outlook.OutlookAddInBase {
+    public sealed partial class OOFGuard : Microsoft.Office.Tools.Outlook.OutlookAddInBase {
         
         internal Microsoft.Office.Tools.CustomTaskPaneCollection CustomTaskPanes;
         
@@ -28,7 +28,7 @@ namespace OOF_Gaurd {
         /// 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public OOFGaurd(global::Microsoft.Office.Tools.Outlook.Factory factory, global::System.IServiceProvider serviceProvider) : 
+        public OOFGuard(global::Microsoft.Office.Tools.Outlook.Factory factory, global::System.IServiceProvider serviceProvider) : 
                 base(factory, serviceProvider, "AddIn", "ThisAddIn") {
             Globals.Factory = factory;
         }
@@ -40,7 +40,7 @@ namespace OOF_Gaurd {
         protected override void Initialize() {
             base.Initialize();
             this.Application = this.GetHostItem<Microsoft.Office.Interop.Outlook.Application>(typeof(Microsoft.Office.Interop.Outlook.Application), "Application");
-            Globals.OOFGaurd = this;
+            Globals.OOFGuard = this;
             global::System.Windows.Forms.Application.EnableVisualStyles();
             this.InitializeCachedData();
             this.InitializeControls();
@@ -174,7 +174,7 @@ namespace OOF_Gaurd {
         private Globals() {
         }
         
-        private static OOFGaurd _OOFGaurd;
+        private static OOFGuard _OOFGuard;
         
         private static global::Microsoft.Office.Tools.Outlook.Factory _factory;
         
@@ -182,13 +182,13 @@ namespace OOF_Gaurd {
         
         private static ThisFormRegionCollection _ThisFormRegionCollection;
         
-        internal static OOFGaurd OOFGaurd {
+        internal static OOFGuard OOFGuard {
             get {
-                return _OOFGaurd;
+                return _OOFGuard;
             }
             set {
-                if ((_OOFGaurd == null)) {
-                    _OOFGaurd = value;
+                if ((_OOFGuard == null)) {
+                    _OOFGuard = value;
                 }
                 else {
                     throw new System.NotSupportedException();
@@ -222,7 +222,7 @@ namespace OOF_Gaurd {
         internal static ThisFormRegionCollection FormRegions {
             get {
                 if ((_ThisFormRegionCollection == null)) {
-                    _ThisFormRegionCollection = new ThisFormRegionCollection(Globals.OOFGaurd.GetFormRegions());
+                    _ThisFormRegionCollection = new ThisFormRegionCollection(Globals.OOFGuard.GetFormRegions());
                 }
                 return _ThisFormRegionCollection;
             }
@@ -263,13 +263,13 @@ namespace OOF_Gaurd {
         
         internal WindowFormRegionCollection this[Microsoft.Office.Interop.Outlook.Explorer explorer] {
             get {
-                return ((WindowFormRegionCollection)(Globals.OOFGaurd.GetFormRegions(explorer, typeof(WindowFormRegionCollection))));
+                return ((WindowFormRegionCollection)(Globals.OOFGuard.GetFormRegions(explorer, typeof(WindowFormRegionCollection))));
             }
         }
         
         internal WindowFormRegionCollection this[Microsoft.Office.Interop.Outlook.Inspector inspector] {
             get {
-                return ((WindowFormRegionCollection)(Globals.OOFGaurd.GetFormRegions(inspector, typeof(WindowFormRegionCollection))));
+                return ((WindowFormRegionCollection)(Globals.OOFGuard.GetFormRegions(inspector, typeof(WindowFormRegionCollection))));
             }
         }
     }

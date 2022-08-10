@@ -2,7 +2,7 @@
 using Microsoft.Office.Interop.Outlook;
 using System.Linq;
 
-namespace OOF_Gaurd
+namespace OOF_Guard
 {
     public partial class Ribbon1
     {
@@ -14,7 +14,7 @@ namespace OOF_Gaurd
         {
             try
             {
-                Application application = Globals.OOFGaurd.Application;
+                Application application = Globals.OOFGuard.Application;
 
                 AppointmentItem app = (AppointmentItem)application.CreateItem(OlItemType.olAppointmentItem);
 

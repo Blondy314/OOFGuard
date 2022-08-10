@@ -33,7 +33,7 @@
     <PublishUrl>publish\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.0.9</ApplicationVersion>
+    <ApplicationVersion>1.0.0.10</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -211,14 +211,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="OOFGaurd.cs">
+    <Compile Include="OOFGuard.cs">
       <SubType>Code</SubType>
     </Compile>
-    <None Include="OOFGaurd.Designer.xml">
-      <DependentUpon>OOFGaurd.cs</DependentUpon>
+    <None Include="OOFGuard.Designer.xml">
+      <DependentUpon>OOFGuard.cs</DependentUpon>
     </None>
-    <Compile Include="OOFGaurd.Designer.cs">
-      <DependentUpon>OOFGaurd.Designer.xml</DependentUpon>
+    <Compile Include="OOFGuard.Designer.cs">
+      <DependentUpon>OOFGuard.Designer.xml</DependentUpon>
     </Compile>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
@@ -245,7 +245,7 @@
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
         <ProjectProperties HostName="Outlook" HostPackage="{29A7B9D7-A7F1-4328-8EF0-6B2D1A56B2C1}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="Outlook" Language="cs" TemplatesPath="" DebugInfoExeName="#Software\Microsoft\Office\16.0\Outlook\InstallRoot\Path#outlook.exe" AddItemTemplatesGuid="{A58A78EB-1C92-4DDD-80CF-E8BD872ABFC4}" />
         <Host Name="Outlook" GeneratedCodeNamespace="OOF_Gaurd" PublishedHash="69C324AB27932AA2FBF2B7EA72250886FF164DE6" IconIndex="0">
-          <HostItem Name="ThisAddIn" Code="OOFGaurd.cs" CanonicalName="AddIn" PublishedHash="0DD8C7665EAC80D10E372EDF7DD0291C28648096" CanActivate="false" IconIndex="1" Blueprint="OOFGaurd.Designer.xml" GeneratedCode="OOFGaurd.Designer.cs" />
+          <HostItem Name="ThisAddIn" Code="OOFGuard.cs" CanonicalName="AddIn" PublishedHash="0DD8C7665EAC80D10E372EDF7DD0291C28648096" CanActivate="false" IconIndex="1" Blueprint="OOFGuard.Designer.xml" GeneratedCode="OOFGuard.Designer.cs" />
         </Host>
       </FlavorProperties>
     </VisualStudio>
