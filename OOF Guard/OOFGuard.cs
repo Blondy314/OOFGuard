@@ -23,6 +23,12 @@ namespace OOF_Guard
                 return;
             }
 
+            // the meeting is being forwarded, ignore
+            if (meeting.Subject.StartsWith("FW:"))
+            {
+                return;
+            }
+
             var appointment = meeting.GetAssociatedAppointment(false);
             if (appointment == null)
             {
