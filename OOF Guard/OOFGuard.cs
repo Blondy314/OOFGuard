@@ -24,7 +24,7 @@ namespace OOF_Guard
             }
 
             // the meeting is being forwarded, ignore
-            if (meeting.Subject.StartsWith("FW:"))
+            if (meeting.Subject.StartsWith("FW:") || meeting.MessageClass != "IPM.Schedule.Meeting.Request")
             {
                 return;
             }
@@ -65,7 +65,7 @@ namespace OOF_Guard
 
             var status = appointment.BusyStatus.ToString().Substring("ol".Length);
 
-            var res = MessageBox.Show($"You are about to send a meeting with {status} status to {meeting.Recipients.Count} recepients.\n\n" +
+            var res = MessageBox.Show($"You are about to send a meeting with {status} status to {meeting.Recipients.Count} recipients.\n\n" +
                 $"This will set all recipients to appear as {status} as well.\n\n" +
                 "Are you sure?", "OOF Guard",
                 MessageBoxButtons.YesNo,
